@@ -51,7 +51,7 @@
     self.RKOTabBar = tabBar;
     
 //    隐藏自带的tabBar
-    self.tabBar.hidden = YES;
+//    self.tabBar.hidden = YES;
 }
 
 // 添加控制器的方法
@@ -74,14 +74,14 @@
 
 // 设置TabBar样式的方法
 - (void)tabBarTitleHighlightedColor:(UIColor *)highligColor backgroundColor:(UIColor *)backgroundColor backgroundImgName:(NSString *)imgName {
-//    高亮状态下的文字颜色
+    // 高亮状态下的文字颜色
     self.RKOTabBar.titleColor = highligColor;
     
     if (backgroundColor) {
-//        TabBAR的背景颜色
+        // TabBAR的背景颜色
         self.RKOTabBar.backgroundColor = backgroundColor;
     } else {
-//        TabBar的背景图片
+        // TabBar的背景图片
         self.RKOTabBar.backgroundImg = [UIImage imageNamed:imgName];
     }
 }

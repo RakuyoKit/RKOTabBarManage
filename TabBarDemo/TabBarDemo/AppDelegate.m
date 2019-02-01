@@ -12,8 +12,6 @@
 
 @interface AppDelegate ()
 
-
-
 @end
 
 @implementation AppDelegate
@@ -23,15 +21,14 @@
     
     // 创建视图
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 创建TabBar
+    RKOTabBarController *tabBarVC = [RKOTabBarController sharedManager];
     
     // 创建测试用VC
     TestViewController *testVC = [[TestViewController alloc] init];
     TestViewController *testVC2 = [[TestViewController alloc] init];
     TestViewController *testVC3 = [[TestViewController alloc] init];
     TestViewController *testVC4 = [[TestViewController alloc] init];
-    
-    // 创建TabBar
-    RKOTabBarController *tabBarVC = [RKOTabBarController sharedManager];
     
     // 设置TabBar的样式
     [tabBarVC tabBarTitleHighlightedColor:[UIColor blackColor] backgroundColor:[UIColor greenColor] backgroundImgName:nil];
@@ -46,6 +43,7 @@
     UIButton *extraBtn = [[UIButton alloc] init];
     [tabBarVC addExtraBtn:extraBtn];
     
+
     // 设置根视图
     self.window.rootViewController = tabBarVC;
     

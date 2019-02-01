@@ -1,7 +1,7 @@
 # RKOTabBarManage
 粗略封装，使用UIView自定义TabBar。
 
-# 提供以下功能:
+## 提供以下功能:
 1. 中间的ExtraButton。
     - 如果不希望该btn在中间，删除/注释掉`RKOTabBar.m`文件中`layoutSubviews`方法下的如下代码就可以另该btn显示在末尾。
  ```objc
